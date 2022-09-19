@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>show how much letter in lower and upper</title>
+</head>
+<body>
+   text: <br>
+    <input type="text" id="textbox">
+    <button type="button" onclick="count()">check</button>
+        <p id="result"></p>
+        <p id="result1"></p>
+         <p id="result2"></p>
+         <p id ="result3"></p>
+         <br>
+  <script type="text/javascript">
+    function count(){
+      var mytext= document.getElementById("textbox").value;
+      var numUpper = (mytext.match(/[A-Z]/g) || []).length;
+      var numLower = (mytext.match(/[a-z]/g) || []).length;
+      var num1 =  (mytext.match(/[0-9]/g) || []).length;
+      var space = (mytext.match(/[ " "]/g) || []).length;
+      document.getElementById("result").innerHTML="Upper " +numUpper;
+      document.getElementById("result1").innerHTML="Lower " +numLower;
+      document.getElementById("result2").innerHTML= "number "+num1;
+      document.getElementById("result3").innerHTML = "Space "+space;
+    }
+</script>
+
+</body>
